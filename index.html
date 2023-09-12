@@ -1,32 +1,9 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>Simple Form</title>
+    <title>Hello World Web Service</title>
 </head>
-
 <body>
-    <h1>Simple Form Example</h1>
-    <form id="simpleForm">
-        <label for="message">Enter a message:</label>
-        <input type="text" id="message" name="message" required>
-        <button type="submit">Submit</button>
-    </form>
-
-    <div id="output"></div>
-
-    <script>
-        document.getElementById('simpleForm').addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevents the form from actually submitting
-
-            // Get the input value
-            var message = document.getElementById('message').value;
-
-            // Display the message
-            var outputElement = document.getElementById('output');
-            outputElement.textContent = 'You entered: ' + message;
-        });
-    </script>
+    <h1>Hello, World!</h1>
 </body>
-
 </html>
