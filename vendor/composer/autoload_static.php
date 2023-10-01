@@ -21,8 +21,13 @@ class ComposerStaticInit41cee965d22543d39d9d8395691340bd
         ),
         'P' => 
         array (
+            'Psr\\Log\\' => 8,
             'Psr\\Http\\Message\\' => 17,
             'PhpParser\\' => 10,
+        ),
+        'M' => 
+        array (
+            'Monolog\\' => 8,
         ),
         'F' => 
         array (
@@ -43,6 +48,10 @@ class ComposerStaticInit41cee965d22543d39d9d8395691340bd
         array (
             0 => __DIR__ . '/..' . '/slim/psr7/src',
         ),
+        'Psr\\Log\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/log/src',
+        ),
         'Psr\\Http\\Message\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/http-factory/src',
@@ -51,6 +60,10 @@ class ComposerStaticInit41cee965d22543d39d9d8395691340bd
         'PhpParser\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
+        ),
+        'Monolog\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
         'Fig\\Http\\Message\\' => 
         array (
