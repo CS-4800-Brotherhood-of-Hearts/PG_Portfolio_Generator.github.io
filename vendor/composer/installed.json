@@ -60,6 +60,56 @@
             "install-path": "../fig/http-message-util"
         },
         {
+            "name": "formr/formr",
+            "version": "1.4.10",
+            "version_normalized": "1.4.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/formr/formr.git",
+                "reference": "d587914b7b5406b390dc4ca9130393fe6df0fc5b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/formr/formr/zipball/d587914b7b5406b390dc4ca9130393fe6df0fc5b",
+                "reference": "d587914b7b5406b390dc4ca9130393fe6df0fc5b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "time": "2023-07-16T16:44:02+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "files": [
+                    "class.formr.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "Tim Gavin",
+                    "homepage": "https://formr.github.io",
+                    "role": "Original Author"
+                }
+            ],
+            "description": "Formr is a PHP micro-framework which helps you build and validate forms quickly, painlessly, and without all the messy overhead.",
+            "support": {
+                "issues": "https://github.com/formr/formr/issues",
+                "source": "https://github.com/formr/formr/tree/1.4.10"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/timgavin",
+                    "type": "github"
+                }
+            ],
+            "install-path": "../formr/formr"
+        },
+        {
             "name": "monolog/monolog",
             "version": "3.4.0",
             "version_normalized": "3.4.0.0",
@@ -123,7 +173,7 @@
                     "dev-main": "3.x-dev"
                 }
             },
-            "installation-source": "source",
+            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "Monolog\\": "src/Monolog"
@@ -980,7 +1030,7 @@
                     "dev-master": "3.x-dev"
                 }
             },
-            "installation-source": "source",
+            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "Psr\\Log\\": "src"
