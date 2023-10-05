@@ -1,0 +1,1 @@
+{"version":1,"defects":{"generate_portfolio_Test::testCreatePortfolio":8,"generate_portfolio_Test::testRedirectWithoutFirstName":7,"generate_portfolio_Test::testRedirectWithoutLastName":7},"times":{"generate_portfolio_Test::testCreatePortfolio":0.01,"generate_portfolio_Test::testRedirectWithoutFirstName":0.002,"generate_portfolio_Test::testRedirectWithoutLastName":0.001}}
