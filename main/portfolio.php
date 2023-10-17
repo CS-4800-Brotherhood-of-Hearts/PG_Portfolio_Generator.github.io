@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
 
-
-<?php
+    <?php
     // Check if form data has been submitted
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Retrieve user's first and last name from the form
@@ -17,7 +18,7 @@
         $phoneNum = $_POST["phoneNum"];
         // Display the user's name
         // echo "<div>Name: " . $firstName . " " . $lastName . "</div>";
-    
+
     } else {
         // If no form data has been submitted, display an error message
         echo "<div>Error: No data submitted.</div>";
@@ -34,9 +35,10 @@
         <hr>
         <h2>About Me</h2>
         <p>
-        <?php echo " " . $AboutMe; ?>
+            <?php echo " " . $AboutMe; ?>
         </p>
     </div>
 
 </body>
+
 </html>

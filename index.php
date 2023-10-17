@@ -1,20 +1,17 @@
+<?php
+include_once 'config.php';
+?>
+
 <!DOCTYPE html>
 <html>
 
-
-<head>
-    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
-</head>
-
 <body>
-
     <a href="hello_world.html">Hello World!</a>
     <p>CD/CD Readyyyyyyyyyyyyyyyyyyyy YEaaaaaaaaaaa</p>
     <a href="formrTest.php">formrTest</a>
-    
+
     <h1>Welcome to the Portfolio Creator</h1>
-    <!--  <form method="get" action="generate_portfolio.php"> -->
-    <form method="post" action="portfolio.php">
+    <form method="post" action="<?php echo HOME_PATH ?>/main/portfolio.php">
 
         <label for="firstName">First Name:</label>
         <input type="text" name="firstName" required>
@@ -37,7 +34,6 @@
 
         <br><br>
         <button type="submit">Create Portfolio</button>
-
     </form>
 </body>
 
