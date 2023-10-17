@@ -14,6 +14,7 @@
         $lastName = $_POST["lastName"];
         $email = $_POST["email"];
         $AboutMe = $_POST["AboutMe"];
+        $phoneNum = $_POST["phoneNum"];
         // Display the user's name
         // echo "<div>Name: " . $firstName . " " . $lastName . "</div>";
     
@@ -29,7 +30,7 @@
         <p>Job Title</p>
         <p>Location</p>
         <p>Email: <?php echo " " . $email; ?></p>
-        <p>Phone: +1 (123) 456-7890</p>
+        <p>Phone:<?php echo " " . $phoneNum; ?></p>
         <hr>
         <h2>About Me</h2>
         <p>
