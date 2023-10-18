@@ -11,7 +11,7 @@ include_once 'config.php';
     <a href="formrTest.php">formrTest</a>
 
     <h1>Welcome to the Portfolio Creator</h1>
-    <form method="post" action="<?php echo HOME_PATH ?>/main/portfolio.php">
+    <form method="post" action="/main/portfolio.php">
 
         <label for="firstName">First Name:</label>
         <input type="text" name="firstName" required>
