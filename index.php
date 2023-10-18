@@ -6,9 +6,9 @@ include_once 'config.php';
 <html>
 
 <body>
-    <a href="hello_world.html">Hello World!</a>
+    <a href="misc/hello_world.html">Hello World!</a>
     <p>CD/CD Readyyyyyyyyyyyyyyyyyyyy YEaaaaaaaaaaa</p>
-    <a href="formrTest.php">formrTest</a>
+    <a href="misc/formrTest.php">formrTest</a>
 
     <h1>Welcome to the Portfolio Creator</h1>
     <form method="post" action="/main/portfolio.php">
