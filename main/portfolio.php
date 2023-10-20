@@ -30,7 +30,8 @@
     ?>
 
     <div class="profile-container">
-        <?php echo "<img src='" . $target_file . "' alt='Uploaded Image'>"; ?>
+        <?php echo "<img src='" . $target_file . "' alt='Uploaded Image'>";
+        echo "<b>Error : " . $_FILES["fileToUpload"]["error"]; ?>
         <h1> <?php echo  $firstName . " " . $lastName; ?> </h1>
         <p>Job Title</p>
         <p>Location</p>
