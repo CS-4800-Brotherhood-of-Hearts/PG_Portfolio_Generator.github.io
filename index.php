@@ -1,5 +1,6 @@
 <?php
 include_once 'config.php';
+echo exec('whoami');
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +33,7 @@ include_once 'config.php';
         <label for="AboutMe">About Me:</label><br>
         <textarea name="AboutMe" rows="5" cols="40"></textarea>
         <br><br>
-        
+
         Select image to upload:
         <input type="file" name="fileToUpload" id="fileToUpload">
         <input type="submit" value="Upload Image" name="submit">
