@@ -19,9 +19,6 @@
         $email = $_POST["email"];
         $AboutMe = $_POST["AboutMe"];
         $phoneNum = $_POST["phoneNum"];
-        // Display the user's name
-        // echo "<div>Name: " . $firstName . " " . $lastName . "</div>";
-
     } else {
         // If no form data has been submitted, display an error message
         echo "<div>Error: No data submitted.</div>";
