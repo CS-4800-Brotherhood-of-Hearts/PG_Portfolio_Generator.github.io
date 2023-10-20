@@ -9,8 +9,7 @@
 
     <?php
     $target_dir = "uploads/";
-    $target_file = $target_dir.basename($_FILES["fileToUpload"]["name"]);
-    move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], "/var/www/html/main/uploads/".$target_file);
+    $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 
     // Check if form data has been submitted
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -30,8 +29,12 @@
     ?>
 
     <div class="profile-container">
-        <?php echo "<img src='" . $target_file . "' alt='Uploaded Image'>";
-        echo "<b>Error : " . $_FILES["fileToUpload"]["error"]; ?>
+        <?php if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+            $uploaded_image = basename($_FILES["fileToUpload"]["name"]);
+            echo "<img src='" . $target_dir . $uploaded_image . "' alt='Uploaded Image'>";
+        } else {
+            echo "Sorry, there was an error uploading your file.";
+        } ?>
         <h1> <?php echo  $firstName . " " . $lastName; ?> </h1>
         <p>Job Title</p>
         <p>Location</p>
