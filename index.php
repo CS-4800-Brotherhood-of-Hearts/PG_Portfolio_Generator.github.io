@@ -11,7 +11,7 @@ include_once 'config.php';
     <a href="misc/formrTest.php">formrTest</a>
 
     <h1>Welcome to the Portfolio Creator</h1>
-    <form method="post" action="/main/portfolio.php">
+    <form method="post" action="/main/portfolio.php" enctype="multipart/form-data">
 
         <label for="firstName">First Name:</label>
         <input type="text" name="firstName" required>
@@ -31,6 +31,11 @@ include_once 'config.php';
 
         <label for="AboutMe">About Me:</label><br>
         <textarea name="AboutMe" rows="5" cols="40"></textarea>
+        <br><br>
+        
+        Select image to upload:
+        <input type="file" name="fileToUpload" id="fileToUpload">
+        <input type="submit" value="Upload Image" name="submit">
 
         <br><br>
         <button type="submit">Create Portfolio</button>

@@ -8,6 +8,10 @@
 <body>
 
     <?php
+    // $target_dir = "uploads/";
+    $target_file = basename($_FILES["fileToUpload"]["name"]);
+    move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
+
     // Check if form data has been submitted
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Retrieve user's first and last name from the form
@@ -26,7 +30,7 @@
     ?>
 
     <div class="profile-container">
-        <img src="profilePicIcon.png" alt="Profile Picture">
+        <?php echo "<img src='" . $target_file . "' alt='Uploaded Image'>"; ?>
         <h1> <?php echo  $firstName . " " . $lastName; ?> </h1>
         <p>Job Title</p>
         <p>Location</p>
