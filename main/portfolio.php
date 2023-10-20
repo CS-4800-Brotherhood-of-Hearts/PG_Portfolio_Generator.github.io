@@ -10,7 +10,7 @@
     <?php
     $target_dir = "uploads/";
     $target_file = $target_dir.basename($_FILES["fileToUpload"]["name"]);
-    move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
+    move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], "/var/www/html/main/uploads/".$target_file);
 
     // Check if form data has been submitted
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
