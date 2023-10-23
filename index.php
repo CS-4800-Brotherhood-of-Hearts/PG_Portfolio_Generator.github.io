@@ -35,7 +35,8 @@ include_once 'config.php';
         <input type="file" name="fileToUpload" id="fileToUpload">
 
         <br><br>
-        <button type="submit">Create Portfolio</button>
+        <input type="submit" value="Create Portfolio" name="submit">
+        //<button type="submit">Create Portfolio</button>
     </form>
 </body>
 
