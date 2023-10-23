@@ -25,6 +25,7 @@
     }
     ?>
 
+    <!-- Upload user's picture -->
     <div class="profile-container">
         <?php if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
             $uploaded_image = basename($_FILES["fileToUpload"]["name"]);
