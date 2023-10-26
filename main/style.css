@@ -1,0 +1,57 @@
+/* Reset some default styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Center the profile section vertically and horizontally */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+}
+
+/* Style the profile container */
+.profile-container {
+    width: 300px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the profile picture */
+.profile-container img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+/* Style headings */
+h1 {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+h2 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Style paragraphs */
+p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Add some spacing between sections */
+hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
