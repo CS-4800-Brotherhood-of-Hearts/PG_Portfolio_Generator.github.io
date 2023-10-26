@@ -1,3 +1,5 @@
+<?php ob_start(); ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -19,6 +21,7 @@
         $email = $_POST["email"];
         $AboutMe = $_POST["AboutMe"];
         $phoneNum = $_POST["phoneNum"];
+        $fileName = strtolower(str_replace(' ', '_', $firstName)) . "_portfolio.html";
     } else {
         // If no form data has been submitted, display an error message
         echo "<div>Error: No data submitted.</div>";
@@ -43,8 +46,17 @@
         <p>
             <?php echo " " . $AboutMe; ?>
         </p>
+        <hr>
+        <?php echo "<a href='$fileName' download>Download Portfolio</a>"; ?>
     </div>
-
 </body>
 
 </html>
+
+<?php
+$portfolioContent = ob_get_clean();
+// Save the file
+file_put_contents($fileName, $portfolioContent);
+
+echo "<script>window.open('$fileName', '_blank');</script>";
+?>
