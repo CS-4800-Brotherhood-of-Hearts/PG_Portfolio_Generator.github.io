@@ -6,7 +6,7 @@ ob_start();
 <html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="<?php echo $_SERVER['DOCUMENT_ROOT'].'\main\style.css';?>">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
