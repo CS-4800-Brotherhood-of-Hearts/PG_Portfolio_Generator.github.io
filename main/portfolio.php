@@ -1,10 +1,12 @@
-<?php ob_start(); ?>
+<?php 
+ob_start();
+?>
 
 <!DOCTYPE html>
 <html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $_SERVER['DOCUMENT_ROOT'].'\main\style.css';?>">
 </head>
 
 <body>
@@ -32,7 +34,7 @@
     <div class="profile-container">
         <?php if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
             $uploaded_image = basename($_FILES["fileToUpload"]["name"]);
-            echo "<img src='" . $target_dir . $uploaded_image . "' alt='Uploaded Image'>";
+            echo "<img src='" . $uploaded_image . "' alt='Uploaded Image'>";
         } else {
             echo "Sorry, there was an error uploading your file.";
         } ?>
@@ -56,7 +58,7 @@
 <?php
 $portfolioContent = ob_get_clean();
 // Save the file
-file_put_contents($fileName, $portfolioContent);
+file_put_contents("uploads/".$fileName, $portfolioContent);
 
-echo "<script>window.open('$fileName', '_blank');</script>";
+echo "<script>window.open('uploads/$fileName', '_blank');</script>";
 ?>
