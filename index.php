@@ -54,30 +54,46 @@ include_once 'config.php';
 
     <div style="max-width:800px" id="formSection">
 
-      <h2>Enter your details below:</h2>
+      <h2>Enter your details below:</h2><br>
       <form method="post" action="/main/portfolio.php" enctype="multipart/form-data">
 
-        <label for="firstName">First Name:</label>
-        <input type="text" name="firstName" placeholder="Enter first name" required>
+        <label for="firstName">First Name:</label><br>
+        <input type="text" name="firstName" style="width: 200px;" placeholder="Enter first name" required>
         <br><br>
-        <label for="lastName">Last Name:</label>
-        <input type="text" name="lastName" placeholder="Enter last name" required>
+        <label for="lastName">Last Name:</label><br>
+        <input type="text" name="lastName" style="width: 200px;" placeholder="Enter last name" required>
+        <br><br>
+
+        <label for="cityZip">City, State & Zip Code:</label><br>
+        <input type="text" name="cityZip" style="width: 200px;" placeholder="City, State XXXXX">
         <br><br>
 
         <label for="email">Email:</label><br>
-        <input type="text" name="email" placeholder="example@test.com">
+        <input type="text" name="email" style="width: 200px;" placeholder="example@test.com">
         <br><br>
 
         <label for="phoneNum">Phone Number:</label><br>
-        <input type="text" name="phoneNum" placeholder="(XXX) XXX-XXX">
+        <input type="text" name="phoneNum" style="width: 200px;" placeholder="(XXX) XXX-XXX">
         <br><br>
 
-        <label for="AboutMe">About Me:</label><br>
-        <textarea name="AboutMe" rows="5" cols="40" placeholder="Add a brief description"></textarea>
+        <label for="education">Education:</label><br>
+        <textarea name="education" rows="5" cols="40" placeholder="Add your education background"></textarea>
+        <br><br>
+
+        <label for="projects">Projects:</label><br>
+        <textarea name="projects" rows="5" cols="40" placeholder="Add the projects you've been invloved in"></textarea>
+        <br><br>
+
+        <label for="employmentExperience">Employment Experience:</label><br>
+        <textarea name="employmentExperience" rows="5" cols="40" placeholder="Add your employment experience"></textarea>
+        <br><br>
+
+        <label for="skills">Summary of Qualifications and Skills:</label><br>
+        <textarea name="skills" rows="5" cols="40" placeholder="Add a summary of your skills and qualifications"></textarea>
         <br><br>
 
         <label for="profilePic">Select image to upload:</label><br>
-        <input type="file" name="fileToUpload" id="fileToUpload">
+        <input type="file" name="fileToUpload" id="fileToUpload" value="main/uploads/defaultProfilePic.png">
 
         <br><br>
         <button class="button" type="submit">Create Portfolio</button>

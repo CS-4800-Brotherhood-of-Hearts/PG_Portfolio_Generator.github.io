@@ -1,4 +1,4 @@
-<?php 
+<?php
 ob_start();
 ?>
 
@@ -20,9 +20,13 @@ ob_start();
         // Retrieve user's first and last name from the form
         $firstName = $_POST["firstName"];
         $lastName = $_POST["lastName"];
-        $email = $_POST["email"];
-        $AboutMe = $_POST["AboutMe"];
+        $cityZip = $_POST["cityZip"];
         $phoneNum = $_POST["phoneNum"];
+        $email = $_POST["email"];
+        $education = $_POST["education"];
+        $projects = $_POST["projects"];
+        $employmentExperience = $_POST["employmentExperience"];
+        $skills = $_POST["skills"];
         $fileName = strtolower(str_replace(' ', '_', $firstName)) . "_portfolio.html";
     } else {
         // If no form data has been submitted, display an error message
@@ -39,14 +43,28 @@ ob_start();
             echo "Sorry, there was an error uploading your file.";
         } ?>
         <h1> <?php echo  $firstName . " " . $lastName; ?> </h1>
-        <p>Job Title</p>
-        <p>Location</p>
-        <p>Email: <?php echo " " . $email; ?></p>
-        <p>Phone:<?php echo " " . $phoneNum; ?></p>
+        <p><?php echo " " . $cityZip; ?></p>
+        <p><?php echo " " . $phoneNum; ?></p>
+        <p><?php echo " " . $email; ?></p>
         <hr>
-        <h2>About Me</h2>
+        <h2>Education</h2>
         <p>
-            <?php echo " " . $AboutMe; ?>
+            <?php echo " " . $education; ?>
+        </p>
+        <hr>
+        <h2>Projects</h2>
+        <p>
+            <?php echo " " . $projects; ?>
+        </p>
+        <hr>
+        <h2>Employment Experience</h2>
+        <p>
+            <?php echo " " . $employmentExperience; ?>
+        </p>
+        <hr>
+        <h2>Summary of Qualifications and Skills</h2>
+        <p>
+            <?php echo " " . $skills; ?>
         </p>
         <hr>
         <?php echo "<a href='$fileName' download>Download Portfolio</a>"; ?>
@@ -58,7 +76,7 @@ ob_start();
 <?php
 $portfolioContent = ob_get_clean();
 // Save the file
-file_put_contents("uploads/".$fileName, $portfolioContent);
+file_put_contents("uploads/" . $fileName, $portfolioContent);
 
 echo "<script>window.open('uploads/$fileName', '_blank');</script>";
 ?>
