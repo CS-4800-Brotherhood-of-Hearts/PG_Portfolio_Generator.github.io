@@ -14,6 +14,7 @@ ob_start();
     <?php
     $target_dir = "uploads/";
     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+    $counterFile = "counter.txt";
 
     // Check if form data has been submitted
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -28,6 +29,10 @@ ob_start();
         $employmentExperience = $_POST["employmentExperience"];
         $skills = $_POST["skills"];
         $fileName = strtolower(str_replace(' ', '_', $firstName)) . "_portfolio.html";
+
+        $count = (int) file_get_contents($counterFile);
+        $count++;
+        file_put_contents($counterFile, $count);
     } else {
         // If no form data has been submitted, display an error message
         echo "<div>Error: No data submitted.</div>";
@@ -40,7 +45,7 @@ ob_start();
             $uploaded_image = basename($_FILES["fileToUpload"]["name"]);
             echo "<img src='" . $uploaded_image . "' alt='Uploaded Image'>";
         } else {
-            echo "Sorry, there was an error uploading your file.";
+            echo "<img src='defaultProfilePic.png' alt='Default Image'>";
         } ?>
         <h1> <?php echo  $firstName . " " . $lastName; ?> </h1>
         <p><?php echo " " . $cityZip; ?></p>
@@ -66,8 +71,6 @@ ob_start();
         <p>
             <?php echo " " . $skills; ?>
         </p>
-        <hr>
-        <?php echo "<a href='$fileName' download>Download Portfolio</a>"; ?>
     </div>
 </body>
 
@@ -78,5 +81,5 @@ $portfolioContent = ob_get_clean();
 // Save the file
 file_put_contents("uploads/" . $fileName, $portfolioContent);
 
-echo "<script>window.open('uploads/$fileName', '_blank');</script>";
+echo "<script>window.open('uploads/$fileName', '_self');</script>";
 ?>

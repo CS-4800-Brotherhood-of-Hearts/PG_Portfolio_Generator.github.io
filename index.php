@@ -24,6 +24,10 @@ include_once 'config.php';
       <ul class="nav-menu">
 
         <li class="nav-item">
+          <a class="nav-link"><?php echo 'Num of visits: ' . file_get_contents(HOME_PATH."/main/counter.txt") ;?></a>
+        </li>
+
+        <li class="nav-item">
           <a href="index.php" class="nav-link">Generator</a>
         </li>
 
@@ -93,7 +97,7 @@ include_once 'config.php';
         <br><br>
 
         <label for="profilePic">Select image to upload:</label><br>
-        <input type="file" name="fileToUpload" id="fileToUpload" value="main/uploads/defaultProfilePic.png">
+        <input type="file" name="fileToUpload" id="fileToUpload">
 
         <br><br>
         <button class="button" type="submit">Create Portfolio</button>
