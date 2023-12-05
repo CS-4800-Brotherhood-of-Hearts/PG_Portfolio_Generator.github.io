@@ -24,7 +24,7 @@ include_once 'config.php';
       <ul class="nav-menu">
 
         <li class="nav-item">
-          <p class="nav-link"><?php echo 'Num of portfolios generated: ' . file_get_contents(HOME_PATH."/main/counter.txt") ;?></p>
+          <a class="nav-link"><?php echo 'Num of portfolios generated: ' . file_get_contents(HOME_PATH."/main/counter.txt") ;?></a>
         </li>
 
         <li class="nav-item">
